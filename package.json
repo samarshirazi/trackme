@@ -1,0 +1,28 @@
+{
+  "name": "trackme",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Automated time tracking application for desktop and mobile",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "desktop": "npm run dev --workspace=@trackme/desktop",
+    "mobile": "npm run start --workspace=@trackme/mobile",
+    "shared": "npm run build --workspace=@trackme/shared",
+    "test:supabase": "node scripts/test-supabase.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
